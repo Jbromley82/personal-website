@@ -1,0 +1,23 @@
+{
+  "response": {
+    "players": [
+      {
+        "steamid": "76561198017422646",
+        "communityvisibilitystate": 3,
+        "profilestate": 1,
+        "personaname": "include beer.h",
+        "lastlogoff": 1469799019,
+        "profileurl": "http://steamcommunity.com/profiles/76561198017422646/",
+        "avatar": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/ff/ffe261c16ac3202cec0ccf543f8c98c634597b2c.jpg",
+        "avatarmedium": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/ff/ffe261c16ac3202cec0ccf543f8c98c634597b2c_medium.jpg",
+        "avatarfull": "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/ff/ffe261c16ac3202cec0ccf543f8c98c634597b2c_full.jpg",
+        "personastate": 1,
+        "primaryclanid": "103582791432279787",
+        "timecreated": 1259782893,
+        "personastateflags": 0,
+        "gameextrainfo": "Total War: WARHAMMER",
+        "gameid": "364360"
+      }
+    ]
+  }
+}

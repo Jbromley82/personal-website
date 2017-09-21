@@ -1,0 +1,12 @@
+# robots.txt for crawlers
+
+# ------------------------------
+
+# All user agents
+User-agent: *
+
+Disallow: /admin/
+
+# ------------------------------
+
+Sitemap: http://domain.com/sitemap.xml

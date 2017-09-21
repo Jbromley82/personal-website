@@ -1,0 +1,476 @@
+
+.professional {
+  position: relative;
+
+  font-size: 20px;
+  height: 900px;
+  width: 100vw;
+  min-width: 320px; 
+  max-width: $max-width;
+  margin-top: 768px;
+  overflow: hidden;
+  background-color: darkGray;
+
+  .prof-container {
+    position: relative;
+    height: 300px;
+    background-position: 50% 25%;
+    background-repeat: no-repeat;
+
+  }
+  .af-container {
+    background-size: 300vw 150vh;
+    background-image: url("../img/af-bg.jpg");
+    .opacity-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0,0.3);
+    }
+    .moving-af.image {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-top: -36px;
+      margin-left: -50px;
+      height: 73px;
+      width: 100px;
+
+      opacity: 0;
+
+      transition: opacity 2s;
+      
+      &.active {
+        opacity: 1.0;
+      }
+    }
+    .moving-af.text {
+        position: absolute;
+        top: 50%;
+        transition: transform 2s;
+        text-align: center;
+        width: 250px;
+        color: yellow;
+        text-align: center;
+    
+      &.text-left {
+        left: 50%;
+        top: 45px;
+        margin-left: -(800px + 125px);
+        
+        &.active {
+          transform: translateX(800px);
+        }
+      }
+      &.text-right {
+        right: 50%;
+        top: auto;
+        margin-right: -(800px + 125px);
+        bottom: 45px;
+
+        &.active {
+          transform: translateX(-800px);
+        }
+      }
+    }
+  }
+  .ewu-container {
+    background-color: black;
+    //background-image: url("../img/ewu-fb-bg.jpg");
+    // 1559x892
+    background-size: 1559px 892px;
+    .moving-ewu.image {
+      position: absolute;
+      left: 5%;
+      top: 50%;
+      margin-left: -400px;
+      margin-top: -62px;
+      height: 125px;
+      width: 125px;
+      // 1280x800
+      // 320x200
+      transition: transform 2s;
+      
+      &.active {
+        transform: translateX(400px);
+      }
+    }
+    .moving-ewu.text {
+      position: absolute;
+      color: red;
+      right: 10%;
+      top: 50%;
+      margin-right: -1200px;
+      margin-top: -70px;
+      text-align: center;
+      width: 160px;
+      height: 200px;
+
+      transition: transform 2s;
+      transition-delay: 0.5s;
+
+      &.active {
+        transform: translateX(-1200px);
+      }
+    }
+  }
+  .rg-container {
+    background-image: url("../img/coding-bg.jpg");
+    background-size: 768px 340px;
+    background-repeat: repeat-y;
+    .moving-rg.image {
+      position: absolute;
+      right: 10%;
+      top: 50%;
+      margin-right: -900px;
+      margin-top: -60px;
+      height: 120px;
+      width: 120px;
+
+      transition: transform 2s;
+      
+      &.active {
+        transform: translateX(-900px);
+      }
+    }
+    .moving-rg.text {
+      position: absolute;
+      left: 10%;
+      top: 50%;
+
+      margin-left: -800px;
+      margin-top: -75px;
+      text-align: center;
+      width: 120px;
+      height: 182px;
+
+      transition: transform 2s;
+      transition-delay: 0.5s;
+
+      &.active {
+        transform: translateX(800px);
+      }
+
+    }
+  }
+}
+/*
+########    ###    ########  ##       ######## ######## 
+   ##      ## ##   ##     ## ##       ##          ##    
+   ##     ##   ##  ##     ## ##       ##          ##    
+   ##    ##     ## ########  ##       ######      ##    
+   ##    ######### ##     ## ##       ##          ##    
+   ##    ##     ## ##     ## ##       ##          ##    
+   ##    ##     ## ########  ######## ########    ##    
+*/
+@include breakpoint-tablet {
+
+  .professional {
+
+    font-size: 20px;
+    height: 1200px;
+    margin-top: 500px;
+
+    .prof-container {
+      height: 400px;
+    }
+    .af-container {
+      background-size: 100vw 600px;
+      .moving-af.image {
+        margin-top: -73px;
+        margin-left: -100px;
+        height: 147px;
+        width: 200px;
+      }
+      .moving-af.text {
+        width: 200px;
+      
+        &.text-left {
+          left: 80px;
+          top: 50%;
+          margin-left: -800px;
+          margin-top: -25px;
+
+          &.active {
+            transform: translateX(800px);
+          }
+        }
+        &.text-right {
+          width: auto;
+          right: 80px;
+          top: 50%;
+          bottom: auto;
+          margin-right: -800px;
+          margin-top: -15px;
+
+          &.active {
+            transform: translateX(-800px);
+          }
+        }
+      }
+    }
+    .ewu-container {
+      // 1559x892
+      background-size: 780px 446px;
+      .moving-ewu.image {
+        left: 100px;
+        margin-left: -400px;
+        margin-top: -125px;
+        width: 320px;
+        height: 200px;
+        // 1280x800
+        // 320x200
+        &.active {
+          transform: translateX(400px);
+        }
+      }
+      .moving-ewu.text {
+        right: 150px;
+        margin-right: -1200px;
+        margin-top: -45px;
+        width: 450px;
+        height: auto;
+
+        &.active {
+          transform: translateX(-1200px);
+        }
+      }
+    }
+    .rg-container {
+      background-size: 1300px 619px;
+      .moving-rg.image {
+        right: 100px;
+        margin-left: 900px;
+        margin-top: -80px;
+        height: 160px;
+        width: 160px;
+        
+        &.active {
+          transform: translateX(-900px);
+        }
+      }
+      .moving-rg.text {
+        left: 100px;
+
+        margin-left: -800px;
+        margin-top: -25px;
+        width: 350px;
+        height: auto;
+
+        &.active {
+          transform: translateX(800px);
+        }
+
+      }
+    }
+  }
+}
+
+
+/*
+########  ########  ######  ##    ## ########  #######  ########  
+##     ## ##       ##    ## ##   ##     ##    ##     ## ##     ## 
+##     ## ##       ##       ##  ##      ##    ##     ## ##     ## 
+##     ## ######    ######  #####       ##    ##     ## ########  
+##     ## ##             ## ##  ##      ##    ##     ## ##        
+##     ## ##       ##    ## ##   ##     ##    ##     ## ##        
+########  ########  ######  ##    ##    ##     #######  ##        
+*/
+
+@include breakpoint-desktop {
+
+  .professional {
+
+    font-size: 28px;
+    height: 1200px;
+    margin-top: 768px;
+
+    .prof-container {
+      height: 400px;
+    }
+    .af-container {
+      background-size: 1920px 1200px;
+      .moving-af.image {
+        margin-top: -73px;
+        margin-left: -100px;
+        height: 147px;
+        width: 200px;
+      }
+      .moving-af.text {
+      
+        &.text-left {
+          left: 100px;
+          margin-left: -800px;
+          margin-top: -25px;
+          width: 30%;
+
+          &.active {
+            transform: translateX(800px);
+          }
+        }
+        &.text-right {
+          right: 100px;
+          margin-right: -800px;
+          margin-top: -15px;
+          width: 30%;
+
+          &.active {
+            transform: translateX(-800px);
+          }
+        }
+      }
+    }
+    .ewu-container {
+      // 1559x892
+      background-size: 1559px 892px;
+      .moving-ewu.image {
+        left: 100px;
+        margin-left: -400px;
+        margin-top: -125px;
+        &.active {
+          transform: translateX(400px);
+        }
+      }
+      .moving-ewu.text {
+        right: 75px;
+        margin-right: -1200px;
+        margin-top: -25px;
+        width: 650px;
+
+        &.active {
+          transform: translateX(-1200px);
+        }
+      }
+    }
+    .rg-container {
+      background-size: 1300px 619px;
+      .moving-rg.image {
+        right: 250px;
+        margin-left: 900px;
+        margin-top: -80px;
+        height: 160px;
+        width: 160px;
+        
+        &.active {
+          transform: translateX(-900px);
+        }
+      }
+      .moving-rg.text {
+        left: 100px;
+
+        margin-left: -800px;
+        margin-top: -25px;
+        width: 650px;
+
+        &.active {
+          transform: translateX(800px);
+        }
+
+      }
+    }
+  }
+}
+
+/*
+##          ###    ########   ######   ########    ########  ########  ######  ##    ## ########  #######  ########  
+##         ## ##   ##     ## ##    ##  ##          ##     ## ##       ##    ## ##   ##     ##    ##     ## ##     ## 
+##        ##   ##  ##     ## ##        ##          ##     ## ##       ##       ##  ##      ##    ##     ## ##     ## 
+##       ##     ## ########  ##   #### ######      ##     ## ######    ######  #####       ##    ##     ## ########  
+##       ######### ##   ##   ##    ##  ##          ##     ## ##             ## ##  ##      ##    ##     ## ##        
+##       ##     ## ##    ##  ##    ##  ##          ##     ## ##       ##    ## ##   ##     ##    ##     ## ##        
+######## ##     ## ##     ##  ######   ########    ########  ########  ######  ##    ##    ##     #######  ##        
+*/
+@include breakpoint-large-desktop {
+
+  .professional {
+
+    font-size: 38px;
+    height: 1200px;
+    margin-top: 768px;
+
+    .prof-container {
+      height: 400px;
+    }
+    .af-container {
+      background-size: 1920px 1200px;
+      .moving-af.image {
+        margin-top: -147px;
+        margin-left: -200px;
+        height: 294px;
+        width: 400px;
+      }
+      .moving-af.text {
+        width: 350px;
+      
+        &.text-left {
+          left: 150px;
+          margin-left: -800px;
+          margin-top: -50px;
+
+          &.active {
+            transform: translateX(800px);
+          }
+        }
+        &.text-right {
+          right: 150px;
+          margin-right: -800px;
+          margin-top: -50px;
+
+          &.active {
+            transform: translateX(-800px);
+          }
+        }
+      }
+    }
+    .ewu-container {
+      // 1559x892
+      background-size: 1920px 1200px;
+      .moving-ewu.image {
+        left: 400px;
+        margin-left: -1200px;
+        
+        &.active {
+          transform: translateX(1200px);
+        }
+      }
+      .moving-ewu.text {
+        right: 375px;
+        margin-right: -1200px;
+        margin-top: -70px;
+        width: 650px;
+
+        &.active {
+          transform: translateX(-1200px);
+        }
+      }
+    }
+    .rg-container {
+      background-size: 1920px 1200px;
+      .moving-rg.image {
+        right: 250px;
+        margin-left: 1200px;
+        margin-top: -160px;
+        height: 320px;
+        width: 320px;
+        
+        &.active {
+          transform: translateX(-1200px);
+        }
+      }
+      .moving-rg.text {
+        left: 300px;
+
+        margin-left: -1200px;
+        margin-top: -25px;
+        width: 650px;
+
+        &.active {
+          transform: translateX(1200px);
+        }
+
+      }
+    }
+  }
+}

@@ -1,0 +1,89 @@
+/**
+ * Base resetting
+ */
+
+
+// Box sizing
+* {
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+
+// Margin/Padding removal 
+html,body {
+  margin: 0;
+  padding: 0;
+  color: white;
+  outline: 0;
+  background-color: gray;
+  width: 100vw;
+  min-width: 320px;
+  max-width: $max-width;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+
+// Reset fonts
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+// Browser outline removal
+a:hover, a:active, a:focus, .ui-state-focus {
+   outline: 0;
+}
+
+// Image default align
+img {
+  vertical-align: middle;
+  height: 100%;
+  width: 100%;
+}
+img[src=""] {
+  display: none;
+}
+
+// Mobile special
+.mobile-only {
+  display: block;
+
+  @include breakpoint-tablet {
+    display: none;
+  }
+}
+.not-mobile {
+  display: none;
+
+  @include breakpoint-tablet {
+    display: block;
+  }
+}
+.bold {
+  //@include font-bold;
+}
+
+// Lazyloading images
+.lazy-hidden {
+  opacity: 0;
+}
+.lazy-loaded {
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -ms-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  opacity: 1;
+}
+
+
+

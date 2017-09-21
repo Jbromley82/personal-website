@@ -1,0 +1,276 @@
+
+.personal {
+  position: relative;
+  height: 568px;
+  min-width: 320px;
+  background-color: darkGray;
+
+  .personal-body {
+    .selection-tabs {
+      position: absolute;
+      top: 50px;
+      width: 295px;
+      left: 50%;
+      margin-left: -137px;
+      z-index: 999;
+
+
+
+      .personal-tab {
+        position: absolute;
+        width: 80px;
+        height: 40px;
+
+        transform: skew(20deg);
+        margin: 0 auto;
+        line-height: 40px;
+        text-align: center;
+        background-color: #808080;
+        transition: background-color 2s;
+        &:visited {
+          color: white;
+        }
+
+        &.active {
+          background-color: #4d4d4d;
+        }
+        &.family-tab {
+          left: 0;
+        }
+        &.brewing-tab {
+          left: 85px;
+        }
+        &.code-tab {
+          left: 170px;
+        }
+      }
+    }
+    .personal-section {
+      position: absolute;
+
+      top: 120px;
+      left: 10%;
+      margin-left: 100vw;
+      width: 100%;
+      height: 300px;        
+      font-size: 14px;
+
+
+      &.sliding-in {
+        transition: transform 1.5s;
+        transform: translateX(-100vw);
+      }
+      &.sliding-out {
+        transition: transform 2s;
+        transform: translateX(-200vw);
+      }
+
+      .personal-image {
+        display: inline-block;
+        margin-right: 30px;
+        float: right;
+        max-width: 40%;
+        
+        &.brewing-img {
+        }
+        &.family-img {
+        }
+
+      }
+      .personal-copy {
+        display: inline-block;
+        float: right;
+        width: 35%;
+      }
+    }
+  }
+}
+
+
+/*
+########    ###    ########  ##       ######## ######## 
+   ##      ## ##   ##     ## ##       ##          ##    
+   ##     ##   ##  ##     ## ##       ##          ##    
+   ##    ##     ## ########  ##       ######      ##    
+   ##    ######### ##     ## ##       ##          ##    
+   ##    ##     ## ##     ## ##       ##          ##    
+   ##    ##     ## ########  ######## ########    ##    
+*/
+@include breakpoint-tablet {
+
+  .personal {
+    height: 568px;
+
+    .personal-body {
+      .selection-tabs {
+        width: 320px;
+        right: 75px;
+        top: 50px;
+        left: auto;
+        margin-left: auto;
+
+        .personal-tab {
+          width: 100px;
+          height: 50px;
+          line-height: 50px;
+
+          &.family-tab {
+            left: 0;
+          }
+          &.brewing-tab {
+            left: 105px;
+          }
+          &.code-tab {
+            left: 210px;
+          }
+        }
+      }
+      .personal-section {
+        top: 180px;
+        left: 50%;
+        width: 850px;
+        height: 300px;
+
+
+
+
+
+        .personal-image {
+          margin-right: 30px;
+          img {
+            top: auto;
+            margin-top: auto;
+          }
+          .family-img {
+            width: 212px;
+            height: 384px;
+          }
+
+
+        }
+        .personal-copy {
+          width: 40%;
+        }
+      }
+    }
+  }
+}
+
+
+/*
+########  ########  ######  ##    ## ########  #######  ########  
+##     ## ##       ##    ## ##   ##     ##    ##     ## ##     ## 
+##     ## ##       ##       ##  ##      ##    ##     ## ##     ## 
+##     ## ######    ######  #####       ##    ##     ## ########  
+##     ## ##             ## ##  ##      ##    ##     ## ##        
+##     ## ##       ##    ## ##   ##     ##    ##     ## ##        
+########  ########  ######  ##    ##    ##     #######  ##        
+*/
+
+@include breakpoint-desktop {
+
+  .personal {
+    height: 568px;
+
+    .personal-body {
+      .selection-tabs {
+        right: 150px;
+        top: 50px;
+
+        .personal-tab {
+          width: 100px;
+          height: 50px;
+
+          &.family-tab {
+            left: 0;
+          }
+          &.brewing-tab {
+            left: 105px;
+          }
+          &.code-tab {
+            left: 210px;
+          }
+        }
+      }
+      .personal-section {
+        top: 180px;
+        left: 50%;
+        width: 950px;
+        height: 300px;
+        font-size: 26px;
+        margin-left: calc(-475px + 100vw);
+
+        .personal-image {
+          margin-right: 30px;
+        }
+        .personal-copy {
+          width: 50%;
+          float: right;
+        }
+      }
+    }
+  }
+}
+
+/*
+##          ###    ########   ######   ########    ########  ########  ######  ##    ## ########  #######  ########  
+##         ## ##   ##     ## ##    ##  ##          ##     ## ##       ##    ## ##   ##     ##    ##     ## ##     ## 
+##        ##   ##  ##     ## ##        ##          ##     ## ##       ##       ##  ##      ##    ##     ## ##     ## 
+##       ##     ## ########  ##   #### ######      ##     ## ######    ######  #####       ##    ##     ## ########  
+##       ######### ##   ##   ##    ##  ##          ##     ## ##             ## ##  ##      ##    ##     ## ##        
+##       ##     ## ##    ##  ##    ##  ##          ##     ## ##       ##    ## ##   ##     ##    ##     ## ##        
+######## ##     ## ##     ##  ######   ########    ########  ########  ######  ##    ##    ##     #######  ##        
+*/
+@include breakpoint-large-desktop {
+
+  .personal {
+    height: 850px;
+
+    .personal-body {
+      .selection-tabs {
+        right: 350px;
+        top: 50px;
+
+        .personal-tab {
+          width: 100px;
+          height: 50px;
+
+          &.family-tab {
+            left: 0;
+          }
+          &.brewing-tab {
+            left: 105px;
+          }
+          &.code-tab {
+            left: 210px;
+          }
+        }
+      }
+      .personal-section {
+        top: 200px;
+        left: 50%;
+        width: 1450px;
+        height: 300px;
+        font-size: 26px;
+        margin-left: calc(-720px + 100vw);
+
+
+        .personal-image {
+          width: 500px;
+          height: 500px;
+          max-width: 40%;
+          margin-right: 30px;
+          img {
+            height: 500px;
+            width: 500px;
+          }
+
+        }
+        .personal-copy {
+          width: 40%;
+          right: 0;
+        }
+      }
+    }
+  }
+}

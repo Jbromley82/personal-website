@@ -1,0 +1,104 @@
+/**
+ * SASS Main
+ *
+ * This file should be kept to defining project variables and importing 
+ *  additional files. A style guide is at the bottom of this document.
+ */
+
+/**
+ * Utils Imports
+ */
+@import "utils/normalize";
+@import "utils/variables";
+@import "utils/mixins";
+
+
+/**
+ * Project Variables
+ */
+
+// Colors
+$color-pastel-blue: #aac8e9;
+$color-dark-pink: #c90a4f;
+$color-hot-pink: #e31776;
+$color-dark-blue: #252561;
+
+
+/**
+ * Project Imports
+ */
+@import "fonts";
+@import "base";
+
+/**
+ * Project Views
+ */
+@import "./views/intro";
+@import "./views/personal";
+@import "./views/professional";
+@import "./views/resume-slide-out";
+@import "./views/steam-slide-out";
+
+
+/**
+ * Style guide for SASS
+ *
+ *  We want to keep the order of attributes inline with this style guide. If we
+ *   have more than 5 attributes we want to use the spacing between attributes
+ *   shown below to make it easier to read. Always have a space separating 
+ *   attributes from the selectors.
+ *
+ **
+
+ .classname {
+    // display
+    display: type;
+    float: left/right;
+    
+    // width/height
+    width: x;
+    height: x;
+
+    // position
+    position: type;
+    top: x;
+    bottom: x;
+    left: x;
+    right x;
+    
+    // margin/padding
+    margin: x;
+    padding: x;
+    
+    // backgrounds
+    background-color: x;
+    background-position: x;
+    
+    // text
+    font-size: x;
+    line-height: x;
+    
+    // nested styles
+    .nested-classname {
+        
+    }
+    
+    // media queries
+    @include breakpoint-tablet {
+        // tablet specific styles
+        
+        // nested styles
+        .nested-classname {
+            
+        }
+    }
+    @include breakpoint-desktop {
+        // desktop specific styles
+        
+        // nested styles
+        .nested-classname {
+            
+        }
+    }
+}
+*/

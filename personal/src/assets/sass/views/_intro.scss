@@ -1,0 +1,187 @@
+// // Vars
+// $animation-bullhorn-num-frames: 2;
+// $animation-bullhorn-size-mobile: 150px;
+// $animation-bullhorn-size-tablet: 250px;
+
+
+// // Animations
+// @keyframes intro_bullhorn_play_mobile {
+//   0% {
+//     background-position: 0px 0px;
+//   }
+//   100% { 
+//     background-position: (-1 * $animation-bullhorn-size-mobile * $animation-bullhorn-num-frames) 0px;
+//   }
+// }
+
+//         width: $animation-bullhorn-size-mobile;
+//         height: $animation-bullhorn-size-mobile;
+
+//         margin-left: (-1 * $animation-bullhorn-size-mobile / 2);
+
+//         background-image: url(../img/intro_bullhorn_strip.png);
+//         background-size: ($animation-bullhorn-size-mobile * $animation-bullhorn-num-frames) $animation-bullhorn-size-mobile;
+//         background-repeat: no-repeat;
+//         animation: intro_bullhorn_play_mobile 1.0s steps($animation-bullhorn-num-frames) infinite;
+
+
+
+.intro {
+  height: 120vh;
+  max-height: 120vh;
+  width: 100vw;
+  min-width: 320px;
+  overflow: hidden;
+  overflow-y: hidden;
+  background-color: gray;
+  background-image: url("../img/space-bg.jpg");
+  background-size: 100vw 120vh;
+  position: fixed;
+  top: 0;
+  .name {
+    width: 90%;
+    margin: 0 auto 40px auto;
+    font-size: 26px;
+    text-align: center;
+  }
+  .intro-statement {
+    font-size: 14px;
+    width: 65%;
+    margin: 0 auto;
+    text-align: center;
+    //width: 20%;
+  }
+  .social-media {
+    width: 300px;
+    margin: 60px auto;
+    text-align: center;
+    z-index: 1200;
+
+    a {
+      text-decoration: none;
+      transition: transform 0.5s;
+      margin-left: 30px;
+      &:hover {
+        transform: scale3d(1.5, 1.5, 1.0);
+      }
+
+    }
+    .fa-envelope {
+      color: blue;
+      &:visited {
+        color: blue;
+      }
+    }
+    .fa-facebook-square {
+      color: #3b5998;
+      &:visited {
+        color: #3b5998;
+      }
+    }
+    .fa-linkedin-square {
+      color: #4875B4;
+      &:visited {
+        color: #4875B4;
+      }
+    }
+    .fa-steam-square {
+      color: black;
+      &:visited {
+        color: black;
+      }
+    }
+  }
+}
+
+/*
+########    ###    ########  ##       ######## ######## 
+   ##      ## ##   ##     ## ##       ##          ##    
+   ##     ##   ##  ##     ## ##       ##          ##    
+   ##    ##     ## ########  ##       ######      ##    
+   ##    ######### ##     ## ##       ##          ##    
+   ##    ##     ## ##     ## ##       ##          ##    
+   ##    ##     ## ########  ######## ########    ##    
+*/
+@include breakpoint-tablet {
+
+  .intro {
+    height: 500px;
+    .name {
+      width: 30%;
+      font-size: 40px;
+    }
+    .intro-statement {
+      font-size: 24px;
+    }
+    .social-media {
+      width: 400px;
+      margin: 60px auto;
+      a {
+        margin-left: 30px;
+      }
+    }
+  }
+}
+/*
+########  ########  ######  ##    ## ########  #######  ########  
+##     ## ##       ##    ## ##   ##     ##    ##     ## ##     ## 
+##     ## ##       ##       ##  ##      ##    ##     ## ##     ## 
+##     ## ######    ######  #####       ##    ##     ## ########  
+##     ## ##             ## ##  ##      ##    ##     ## ##        
+##     ## ##       ##    ## ##   ##     ##    ##     ## ##        
+########  ########  ######  ##    ##    ##     #######  ##        
+*/
+
+@include breakpoint-desktop {
+
+  .intro {
+    font-size: 24px;
+    height: 768px;
+    .name {
+      font-size: 40px;
+    }
+    .intro-statement {
+      width:50%;
+      font-size: 30px;
+    }
+    .social-media {
+      width: 400px;
+      margin: 60px auto;
+      a {
+        margin-left: 30px;
+      }
+    }
+  }
+
+}
+/*
+##          ###    ########   ######   ########    ########  ########  ######  ##    ## ########  #######  ########  
+##         ## ##   ##     ## ##    ##  ##          ##     ## ##       ##    ## ##   ##     ##    ##     ## ##     ## 
+##        ##   ##  ##     ## ##        ##          ##     ## ##       ##       ##  ##      ##    ##     ## ##     ## 
+##       ##     ## ########  ##   #### ######      ##     ## ######    ######  #####       ##    ##     ## ########  
+##       ######### ##   ##   ##    ##  ##          ##     ## ##             ## ##  ##      ##    ##     ## ##        
+##       ##     ## ##    ##  ##    ##  ##          ##     ## ##       ##    ## ##   ##     ##    ##     ## ##        
+######## ##     ## ##     ##  ######   ########    ########  ########  ######  ##    ##    ##     #######  ##        
+*/
+@include breakpoint-large-desktop {
+
+  .intro {
+    font-size: 32px;
+    height: 768px;
+    max-width: $max-width;
+    .name {
+      font-size: 45px;
+    }
+    .intro-statement {
+      width: 70%;
+    }
+    .social-media {
+      width: 350px;
+      margin: 60px auto;
+      a {
+        margin-left: 30px;
+      }
+    }
+  }
+
+}

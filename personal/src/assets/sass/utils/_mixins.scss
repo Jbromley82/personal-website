@@ -1,0 +1,81 @@
+/**
+ * Commonly used mixins
+ */
+
+
+// Breakpoints
+@mixin breakpoint-tablet {
+  @media only screen and (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+@mixin breakpoint-desktop {
+  @media only screen and (min-width: $breakpoint-desktop) {
+    @content;
+  }
+
+}
+
+@mixin breakpoint-large-desktop {
+  @media only screen and (min-width: $breakpoint-large-desktop) {
+    @content;
+  }
+
+}
+
+// Clearfix
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+// Opacity
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: ($opacity * 100);
+  filter: alpha(opacity=$opacity-ie); // IE8
+}
+
+
+// Size
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+
+// Center-align a block level element
+@mixin center-block() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Text ellipsis
+@mixin text-ellipsis() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+// Shadows
+@mixin box-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4), $inset: "") {
+  @if ($inset != "") {
+    box-shadow: $inset $x $y $blur $color;
+  } 
+  @else {
+    box-shadow: $x $y $blur $color;
+  }
+}
+@mixin text-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4)) {
+    text-shadow: $x $y $blur $color;
+}
+
